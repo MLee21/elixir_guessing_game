@@ -13,4 +13,9 @@ defmodule GuessingTest do
     assert Guessing.check_user_input(11) == {:error, "11 is not a valid number. Please input a number between 1-10"}
     assert Guessing.check_user_input(22) == {:error, "22 is not a valid number. Please input a number between 1-10"}
   end
+
+  test "Convert user input to integer" do
+    assert Guessing.convert_user_input("4") == 4
+  end
+
 end
