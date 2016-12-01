@@ -12,4 +12,12 @@ defmodule Guessing do
     String.to_integer(string)
   end
 
+  def compare_numbers(random_number, user_number) when random_number == user_number do
+    {:ok, user_number}
+  end
+
+  def compare_numbers(random_number, user_number) when random_number != user_number do
+    {:error, "Wrong! Your guess was #{user_number}, but the number is #{random_number}" }
+  end
+
 end

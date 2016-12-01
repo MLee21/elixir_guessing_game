@@ -18,4 +18,18 @@ defmodule GuessingTest do
     assert Guessing.convert_user_input("4") == 4
   end
 
+  test "Compare random number with user input that returns true" do
+    random_number = 6
+    user_number = 6
+
+    assert Guessing.compare_numbers(random_number, user_number) == {:ok, user_number}
+  end
+
+  test "Compare random number with user input that returns false" do
+    random_number = 7
+    user_number = 2
+
+    assert Guessing.compare_numbers(random_number, user_number) == {:error, "Wrong! Your guess was #{user_number}, but the number is #{random_number}" }
+  end
+
 end
