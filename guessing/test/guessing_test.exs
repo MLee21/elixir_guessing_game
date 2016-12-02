@@ -15,7 +15,7 @@ defmodule GuessingTest do
   end
 
   test "Convert user input to integer" do
-    assert Guessing.convert_user_input("4") == 4
+    assert Guessing.convert_user_input("4\n") == 4
   end
 
   test "Compare random number with user input that returns true" do

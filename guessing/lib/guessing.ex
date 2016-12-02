@@ -9,7 +9,7 @@ defmodule Guessing do
   end
 
   def convert_user_input(string) do
-    String.to_integer(string)
+    string |> String.strip |> String.to_integer
   end
 
   def compare_numbers(random_number, user_number) when random_number == user_number do
